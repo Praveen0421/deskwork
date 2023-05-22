@@ -1,0 +1,103 @@
+$input-focus-box-shadow: none;
+$input-border-color: 2px solid #ffffff;
+$input-focus-color: #ffffff;
+$icon-color:#ffffff;
+$input-bg: rgb(0, 0, 0);
+$input-placeholder-color: #ffffff;
+$input-padding-x: 25px;              
+$btn-padding-y: 8px   ;         
+$btn-padding-x: 24px;      
+// $bs-btn-hover-bg: #b31729;
+$--bs-btn-hover-bg: #e7081e;
+
+.form-floating {
+    position: relative;
+    border: $input-border-color;
+    border-radius: 6px;
+    box-sizing: border-box;
+    overflow: hidden;
+    .label{
+        position: absolute;
+        left: 40px;
+        top: 16px;
+        color: $secondary-grey ;
+        width: fit-content;
+        height: fit-content;
+    }
+    .form-control {
+    
+        background-color: $input-bg;
+        color: white;
+        margin-left:  48px ;
+        padding-left: 20px;
+        border: none;
+        top: 40px;
+        max-width: 100%;
+
+       box-shadow: $input-focus-box-shadow; 
+  }   
+ }
+   
+//  .form-control:focus~ .label {
+//         top: -5px;
+//         left: 15px;
+//         background-color: $input-bg;
+//         color: $input-placeholder-color ;
+        
+//     }
+
+.form-control:focus ~ .label,
+.form-control:not(:placeholder-shown) ~ .label {
+  top: -5px;
+  left: 15px;
+  background-color: $input-bg;
+  color: $input-placeholder-color;
+}
+
+
+ .form-floating:focus-within {
+        border-color: red;
+      }
+      
+
+// icons
+
+.icon{
+    color:$icon-color;
+    position: absolute;
+    top: 13px;
+    left: 14px;
+    font-size: 20px;
+}
+.icon-sm {
+    font-size: 16px;
+    top: 18px; 
+}
+.eye-icon{
+    color:$icon-color;
+    position: absolute;
+    top: 16px;
+    right: 14px;
+    cursor: pointer;
+}
+.btn-outline{
+    color: $btn-danger;
+    border: 1px solid $btn-danger;
+    border-radius: 7px;
+}
+.btn-outline:hover{
+    color: white;
+    border: 1px solid $btn-danger;
+    background-color:$btn-danger;
+}
+
+.btn-bg{
+    background-color: $btn-danger;
+    color: white;
+    padding: $btn-padding-y $btn-padding-x;
+    border-radius: 7px;
+}
+.btn-bg:hover{
+    color: white;
+    background-color:$--bs-btn-hover-bg;
+}
